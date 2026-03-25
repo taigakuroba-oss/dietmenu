@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #10b981;
+  --color-primary-dark: #059669;
+  --color-accent: #f59e0b;
+  --color-danger: #ef4444;
+  --color-bg: #f8fafc;
+  --color-card: #ffffff;
+  --color-text: #1e293b;
+  --color-text-secondary: #64748b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+@layer components {
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold mb-6 text-emerald-700 border-b-2 border-emerald-200 pb-2;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md p-4 md:p-6 transition-all duration-200 hover:shadow-lg;
+  }
+
+  .badge-low {
+    @apply bg-green-100 text-green-800 px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-mid {
+    @apply bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-high {
+    @apply bg-red-100 text-red-800 px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-warmup {
+    @apply bg-orange-100 text-orange-800 px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-cooldown {
+    @apply bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-both {
+    @apply bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .if-then-card {
+    @apply bg-gradient-to-r from-amber-50 to-orange-50 border-l-4 border-amber-400 p-3 rounded-r-lg;
+  }
+
+  .nav-link {
+    @apply px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 hover:bg-emerald-100 hover:text-emerald-700;
+  }
+
+  .nav-link-active {
+    @apply bg-emerald-600 text-white hover:bg-emerald-700 hover:text-white;
+  }
+}
